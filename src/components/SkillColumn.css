@@ -1,0 +1,49 @@
+.skill-column-container {
+    border-style: solid;
+    border-color: #00111f;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0 1rem;
+    background-color: white;
+}
+
+.skill-column-container h2 {
+    margin-top: 0;
+}
+
+.skill-column-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #00111f;
+}
+
+.skill-bar-amount {
+    text-align: right;
+    color: white;
+    padding: 0 5px;
+    width: 20%;
+}
+
+.skill-row {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    width: 20vw;
+}
+
+.skill-name {
+    width: 100px;
+    text-align: right;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+.skill-bar-cover {
+    width: 100%;
+    background-color: red;
+}

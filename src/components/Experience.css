@@ -1,0 +1,89 @@
+.exp-container {
+    align-items: stretch;
+    flex-direction: column;
+    display: flex;
+    color: #00111f;
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    position: relative;
+    margin: 0 2vw;
+}
+
+.exp {
+    display: block;
+    padding: 1rem;
+    margin: 0 15vw;
+    padding-top: 60px;
+    opacity: 0;
+}
+
+.exp h1 {
+    font-size: 2vw;
+}
+
+.exp h2 {
+    font-size: 1.5vw;
+    font-weight: normal;
+}
+
+.exp h3 {
+    font-size: 1vw;
+}
+
+.light-text {
+    margin: 0 auto;
+    font-weight: lighter;
+}
+
+.work-exp-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.work-exp {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.work-exp-pic {
+    transform: rotateY(-90deg);
+}
+
+.work-exp-info {
+    margin-left: 5vw;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 80vw;
+    transform: rotateY(90deg);
+}
+
+.work-exp-description {
+    margin: auto 5vw;
+    width: 800px;
+    opacity: 0;
+}
+
+.download-button {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #0083f0;
+    color: #0083f0;
+    background-color: white;
+    transition: 200ms;
+    outline: none;
+}
+
+.download-button:hover {
+    transform: scale(1.2);
+    color:white;
+    background-color: #0083f0;
+}
+
+.download-button:active {
+    transform: scale(1.1);
+    background-color: #0068bf;
+}

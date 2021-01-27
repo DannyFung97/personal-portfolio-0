@@ -1,0 +1,50 @@
+.bio-container {
+    align-items: stretch;
+    flex-direction: column;
+    display: flex;
+    color: #00111f;
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    position: relative;
+    margin: 0 2vw;
+}
+
+.bio {
+    display: block;
+    padding: 1rem;
+    margin: 0 15vw;
+    padding-top: 60px;
+    opacity: 0;
+}
+
+.bio-photo {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 50%;
+}
+
+.bio-photo img {
+    height: auto;
+    width: 100%;
+}
+
+.bio-paragraph {
+    margin: 10vh 0;
+}
+
+.bio h1 {
+    font-size: 2vw;
+}
+
+.bio h2 {
+    font-size: 1.5vw;
+    font-weight: normal;
+}
+
+.bio-description {
+    opacity: 0;
+}

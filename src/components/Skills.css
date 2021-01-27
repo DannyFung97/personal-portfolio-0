@@ -1,0 +1,33 @@
+.skills-container {
+    align-items: stretch;
+    flex-direction: column;
+    display: flex;
+    color: #00111f;
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    position: relative;
+    margin: 0 2vw;
+}
+
+.skills {
+    padding-top: 60px;
+    margin: 0 15vw;
+    opacity: 0;
+}
+
+.skills h1 {
+    font-size: 2vw;
+}
+
+.skills h2 {
+    font-size: 1.5vw;
+    font-weight: normal;
+}
+
+.skill-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10vh 0;
+}
