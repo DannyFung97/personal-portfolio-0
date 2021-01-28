@@ -33,9 +33,11 @@
 }
 
 .nav-container a:hover{
-    color: #0083f0;
+    color: #1a1a1a;
     transform: scale(1.2);
-    background-color: #242424;
+    transition: 300ms;
+    background-color: white;
+    animation: glowBox 6s infinite;
 }
 
 .nav-container a:active {
@@ -51,3 +53,31 @@
 .sticky + .content {
     padding-top: 60px;
   }
+
+@keyframes glowBox {
+  0% {
+      -webkit-box-shadow:inset 0px -.1rem 0px 0px #0083f0;
+      -moz-box-shadow:inset 0px -.1rem 0px 0px #0083f0;
+      box-shadow:inset 0px -.1rem 0px 0px #0083f0;
+  }
+  25% {
+      -webkit-box-shadow:inset 0px -.1rem 0px 0px #725286;
+      -moz-box-shadow:inset 0px -.1rem 0px 0px #725286;
+      box-shadow:inset 0px -.1rem 0px 0px #725286;
+  }
+  50% {
+      -webkit-box-shadow:inset 0px -.1rem 0px 0px #e3211c;
+      -moz-box-shadow:inset 0px -.1rem 0px 0px #e3211c;
+      box-shadow:inset 0px -.1rem 0px 0px #e3211c;
+  }
+  75% {
+      -webkit-box-shadow:inset 0px -.1rem 0px 0px #725286;
+      -moz-box-shadow:inset 0px -.1rem 0px 0px #725286;
+      box-shadow:inset 0px -.1rem 0px 0px #725286;
+  }
+  100% {
+      -webkit-box-shadow:inset 0px -.1rem 0px 0px #0083f0;
+      -moz-box-shadow:inset 0px -.1rem 0px 0px #0083f0;
+      box-shadow:inset 0px -.1rem 0px 0px #0083f0;
+  }
+}

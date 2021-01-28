@@ -1,0 +1,90 @@
+.contact-container {
+    align-items: stretch;
+    flex-direction: column;
+    display: flex;
+    color: #00111f;
+    text-align: center;
+    padding: 2rem;
+    /* background-color: white; */
+    background-image: linear-gradient(to bottom, white 50%, #1a1a1a 50%);
+    position: relative;
+    margin: 0 2vw;
+    padding-bottom: 4rem;
+}
+
+.contact-me {
+    display: block;
+    padding: 1rem;
+    margin: 0 15vw;
+    padding-top: 60px;
+    opacity: 0;
+}
+
+.contact-me h1 {
+    font-size: 2vw;
+}
+
+.contact-me h2 {
+    font-size: 1.5vw;
+    font-weight: normal;
+    margin-top: 4rem;
+}
+
+.contact-options {
+    padding-top: 4rem;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 40px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100%;
+  background: #1a1a1a;
+  color: white;
+  transition: 200ms;
+  border: 1px solid white;
+  margin: 0 0.8rem;
+}
+
+.fa:hover {
+    color: #1a1a1a;
+    background: white;
+    transform: scale(1.2);
+    animation: glowCircle 6s infinite;
+}
+
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+.footer-size {
+    padding: 5px;
+    font-size: 24px;
+    width: 24px;
+    vertical-align: middle;
+    margin: -2px 0px 0px 0px;
+    border: none;
+    pointer-events: none;
+}
+
+@keyframes glowCircle {
+    0% {
+        border: 1px solid #0083f0;
+    }
+    25% {
+        border: 1px solid #725286;
+    }
+    50% {
+        border: 1px solid #e3211c;
+    }
+    75% {
+        border: 1px solid #725286;
+    }
+    100% {
+        border: 1px solid #0083f0;
+    }
+  }

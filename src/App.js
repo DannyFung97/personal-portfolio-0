@@ -17,8 +17,8 @@ function App() {
                 <BioSection />
                 <SkillSection />
                 <ExperienceSection />
-                {/* <ProjectSection />
-                <ContactSection /> */}
+                {/* <ProjectSection /> */}
+                <ContactSection />
             </div>
         </div>
     )

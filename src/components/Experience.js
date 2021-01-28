@@ -83,9 +83,9 @@ const Experience = () => {
             <div id='experience' className='exp'>
                 <h1>Experience</h1>
                 <div className='resume-download'>
-                    {/* <a href={resume} download> */}
+                    <a href={resume} download>
                         <button className='download-button'>Download Resume</button>
-                    {/* </a> */}
+                    </a>
                 </div>
                 <div id='list' className='work-exp-list'>
                     <ul>
