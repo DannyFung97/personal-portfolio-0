@@ -49,7 +49,7 @@
 }
 
 .fa:hover {
-    color: #1a1a1a;
+    color: #00111f;
     background: white;
     transform: scale(1.2);
     animation: glowCircle 6s infinite;
@@ -72,19 +72,19 @@
 }
 
 @keyframes glowCircle {
-    0% {
-        border: 1px solid #0083f0;
-    }
-    25% {
-        border: 1px solid #725286;
-    }
-    50% {
-        border: 1px solid #e3211c;
-    }
-    75% {
-        border: 1px solid #725286;
-    }
-    100% {
-        border: 1px solid #0083f0;
-    }
+  0% {
+      border: 1px solid #0083f0;
   }
+  25% {
+      border: 1px solid #725286;
+  }
+  50% {
+      border: 1px solid #e3211c;
+  }
+  75% {
+      border: 1px solid #725286;
+  }
+  100% {
+      border: 1px solid #0083f0;
+  }
+}
