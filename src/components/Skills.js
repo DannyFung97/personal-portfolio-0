@@ -16,14 +16,14 @@ const Skills = () => {
         { name: 'Solidity', mastery: 70 },
         { name: 'Python', mastery: 65 },
         { name: 'SQL', mastery: 65 },
-    ],[
+    ], [
         //frameworks
         { name: 'Node.js', mastery: 90 },
         { name: 'Express.js', mastery: 85 },
         { name: 'React', mastery: 90 },
         { name: 'Gatsby', mastery: 85 },
         { name: 'Redux', mastery: 70 },
-    ],[
+    ], [
         //dev tools
         { name: 'GitHub', mastery: 90 },
         { name: 'VS Code', mastery: 90 },
@@ -40,7 +40,7 @@ const Skills = () => {
         let elementPos = window.pageYOffset + columnGroup.getBoundingClientRect().top + (columnGroup.offsetHeight / 4);
         if (scrollPos + window.innerHeight > elementPos) {
             let columns = document.getElementsByClassName('column-list')
-            for (let i = 0; i < columns.length; i++){
+            for (let i = 0; i < columns.length; i++) {
                 let barsToFill = columns[i].getElementsByClassName('skill-bar-amount')
                 fill(barsToFill, i);
             }
@@ -66,13 +66,27 @@ const Skills = () => {
     }
 
     return (
-        <div className='container'>
-            <div id='skills' className='section-content'>
-                <h1>Skills</h1>
-                <div id='columns' className='column-group'>
+        // <div className='container'>
+        //     <div id='skills' className='section-content'>
+        //         <h1>Skills</h1>
+        //         <div id='columns' className='column-group'>
+        //             <SkillColumn title={'Languages'} skills={skills[0]} colorHex={colors[0]} />
+        //             <SkillColumn title={'Frameworks'} skills={skills[1]} colorHex={colors[1]} />
+        //             <SkillColumn title={'Dev Tools'} skills={skills[2]} colorHex={colors[2]} />
+        //         </div>
+        //     </div>
+        // </div>
+        <div id='skills' className='column has-text-centered'>
+            <h1 className='has-text-black is-size-2'>Skills</h1>
+            <div id='columns' className='columns is-10'>
+                <div className='column'>
                     <SkillColumn title={'Languages'} skills={skills[0]} colorHex={colors[0]} />
-                    <SkillColumn title={'Frameworks'} skills={skills[1]} colorHex={colors[1]} />
-                    <SkillColumn title={'Dev Tools'} skills={skills[2]} colorHex={colors[2]} />
+                </div>
+                <div className='column'>
+                    <SkillColumn title={'Languages'} skills={skills[1]} colorHex={colors[1]} />
+                </div>
+                <div className='column'>
+                    <SkillColumn title={'Languages'} skills={skills[2]} colorHex={colors[2]} />
                 </div>
             </div>
         </div>

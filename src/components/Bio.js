@@ -34,20 +34,37 @@ const Bio = () => {
     }
 
     return (
-        <div className='container'>
-            <div id='bio' className='section-content'>
-                <h1>Bio</h1>
+        // <div className='container'>
+        //     <div id='bio' className='section-content'>
+        //         <h1>Bio</h1>
+        //         <div id='bio-photo-div' className='bio-photo'>
+        //             <img src={danny} />
+        //         </div>
+        //         <div className='bio-paragraph'>
+        //             <h2 className='bio-description'>
+        //                 I'm a Full Stack Web Developer from San Francisco, CA.
+        //             </h2>
+        //             <h2 className='bio-description'>
+        //                 I've worked with multiple organizations to create user interfaces and applications.
+        //                 As a curious problem solver, I enjoy learning about new things and building cool projects.
+        //             </h2>
+        //         </div>
+        //     </div>
+        // </div>
+        <div className='columns is-centered pt-6'>
+            <div id='bio' className="column has-text-centered is-10">
+                <h1 className='has-text-black is-size-2'>Bio</h1>
                 <div id='bio-photo-div' className='bio-photo'>
                     <img src={danny} />
                 </div>
                 <div className='bio-paragraph'>
-                    <h2 className='bio-description'>
+                    <h2 className='has-text-black is-size-3'>
                         I'm a Full Stack Web Developer from San Francisco, CA.
-                    </h2>
-                    <h2 className='bio-description'>
+                </h2>
+                    <h2 className='has-text-black is-size-3'>
                         I've worked with multiple organizations to create user interfaces and applications.
                         As a curious problem solver, I enjoy learning about new things and building cool projects.
-                    </h2>
+                </h2>
                 </div>
             </div>
         </div>
