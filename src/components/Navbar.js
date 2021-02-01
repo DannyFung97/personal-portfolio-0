@@ -21,7 +21,6 @@ const Navbar = () => {
     }, [])
 
     document.addEventListener('scroll', function (e) {
-        console.log(window.scrollY, window.scrollY + window.innerHeight)
         if (element != undefined) {
             if (window.pageYOffset >= sticky) {
                 element.classList.add("sticky")
@@ -48,16 +47,16 @@ const Navbar = () => {
     }
 
     return (
-        <div id='nav-container' className='nav-container'>
+        <nav id='nav-container' className='nav-container'>
             <ul>
                 <li><a className='nav' href='#home'>Home</a></li>
                 <li><a className='nav' href='#bio'>Bio</a></li>
                 <li><a className='nav' href='#skills'>Skills</a></li>
                 <li><a className='nav' href='#experience'>Experience</a></li>
-                <li><a className='nav' href='#projects'>My Projects</a></li>
+                <li><a className='nav' href='#projects'>Projects</a></li>
                 <li><a className='nav' href='#contact'>Contact</a></li>
             </ul>
-        </div>
+        </nav>
     )
 }
 

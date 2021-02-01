@@ -1,37 +1,10 @@
 .contact-container {
-    align-items: stretch;
-    flex-direction: column;
-    display: flex;
-    color: #00111f;
-    text-align: center;
-    padding: 2rem;
-    /* background-color: white; */
-    background-image: linear-gradient(to bottom, white 50%, #1a1a1a 50%);
-    position: relative;
-    margin: 0 2vw;
     padding-bottom: 4rem;
-}
-
-.contact-me {
-    display: block;
-    padding: 1rem;
-    margin: 0 15vw;
-    padding-top: 60px;
-    opacity: 0;
-}
-
-.contact-me h1 {
-    font-size: 2vw;
-}
-
-.contact-me h2 {
-    font-size: 1.5vw;
-    font-weight: normal;
-    margin-top: 4rem;
+    background-image: linear-gradient(to bottom, white 50%, #1a1a1a 50%);
 }
 
 .contact-options {
-    padding-top: 4rem;
+    padding-top: 50px;
 }
 
 .fa {

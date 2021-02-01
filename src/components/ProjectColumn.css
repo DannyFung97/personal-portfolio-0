@@ -1,0 +1,7 @@
+.project-img {
+    width: 100%;
+}
+
+.project-container {
+    transform: rotateY(90deg);
+}

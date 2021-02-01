@@ -12,7 +12,6 @@ const Bio = () => {
         let elementPos = window.pageYOffset + bio.getBoundingClientRect().top + (bio.offsetHeight / 4);
         if (scrollPos + window.innerHeight > elementPos) {
             let descriptions = bio.getElementsByClassName('bio-description');
-            console.log(descriptions)
             for (let i = 0; i < descriptions.length; i++) {
                 popIn(descriptions[i], i)
             }
@@ -35,8 +34,8 @@ const Bio = () => {
     }
 
     return (
-        <div className='bio-container'>
-            <div id='bio' className='bio'>
+        <div className='container'>
+            <div id='bio' className='section-content'>
                 <h1>Bio</h1>
                 <div id='bio-photo-div' className='bio-photo'>
                     <img src={danny} />

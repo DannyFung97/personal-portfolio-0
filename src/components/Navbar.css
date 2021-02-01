@@ -18,7 +18,7 @@
 .nav-container li a {
     display: inline-block;
     text-align: center;
-    font-size: 1.2vw;
+    font-size: 1.8rem;
 }
 
 .nav-container a:link, .nav-container a:visited {

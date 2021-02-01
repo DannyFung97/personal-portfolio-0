@@ -71,7 +71,7 @@ const Experience = () => {
             ],
                 {
                     duration: 500,
-                    delay: 1000,
+                    delay: 700,
                     easing: 'ease',
                     fill: 'forwards'
                 })
@@ -79,12 +79,12 @@ const Experience = () => {
     }
 
     return (
-        <div className='exp-container'>
-            <div id='experience' className='exp'>
+        <div className='container'>
+            <div id='experience' className='section-content'>
                 <h1>Experience</h1>
                 <div className='resume-download'>
-                    <a href={resume} download>
-                        <button className='download-button'>Download Resume</button>
+                    <a href={resume}>
+                        <button>Resume</button>
                     </a>
                 </div>
                 <div id='list' className='work-exp-list'>

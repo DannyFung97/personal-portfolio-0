@@ -4,7 +4,7 @@ import './SkillColumn.css';
 const SkillColumn = ({ title, skills, colorHex }) => {
 
     return (
-        <div id='column-container' className='skill-column-container'>
+        <div id='skill-column-container' className='column-container'>
             <h2>{title}</h2>
             <div id='column-list' className='column-list'>
                 <ul>

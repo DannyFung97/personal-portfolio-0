@@ -12,13 +12,10 @@ const Skills = () => {
         { name: 'JavaScript', mastery: 90 },
         { name: 'HTML', mastery: 85 },
         { name: 'CSS', mastery: 80 },
-        // { name: 'C#', mastery: 80 },
         { name: 'Java', mastery: 80 },
-        // { name: 'C++', mastery: 75 },
         { name: 'Solidity', mastery: 70 },
         { name: 'Python', mastery: 65 },
         { name: 'SQL', mastery: 65 },
-        // { name: 'C', mastery: 60 },
     ],[
         //frameworks
         { name: 'Node.js', mastery: 90 },
@@ -69,10 +66,10 @@ const Skills = () => {
     }
 
     return (
-        <div className='skills-container'>
-            <div id='skills' className='skills'>
+        <div className='container'>
+            <div id='skills' className='section-content'>
                 <h1>Skills</h1>
-                <div id='columns' className='skill-columns'>
+                <div id='columns' className='column-group'>
                     <SkillColumn title={'Languages'} skills={skills[0]} colorHex={colors[0]} />
                     <SkillColumn title={'Frameworks'} skills={skills[1]} colorHex={colors[1]} />
                     <SkillColumn title={'Dev Tools'} skills={skills[2]} colorHex={colors[2]} />
