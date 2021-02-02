@@ -14,7 +14,7 @@ const Skills = () => {
         { name: 'CSS', mastery: 80 },
         { name: 'Java', mastery: 80 },
         { name: 'Solidity', mastery: 70 },
-        { name: 'Python', mastery: 65 },
+        { name: 'Python', mastery: 60 },
         { name: 'SQL', mastery: 65 },
     ], [
         //frameworks
@@ -22,14 +22,17 @@ const Skills = () => {
         { name: 'Express.js', mastery: 85 },
         { name: 'React', mastery: 90 },
         { name: 'Gatsby', mastery: 85 },
-        { name: 'Redux', mastery: 70 },
+        { name: 'Redux', mastery: 75 },
+        { name: 'Bootstrap', mastery: 80 },
+        { name: 'Bulma', mastery: 85 },
     ], [
         //dev tools
         { name: 'GitHub', mastery: 90 },
+        { name: 'npm', mastery: 90 },
         { name: 'VS Code', mastery: 90 },
-        { name: 'Bootstrap', mastery: 80 },
         { name: 'MongoDB', mastery: 70 },
         { name: 'Docker', mastery: 60 },
+        { name: 'Bitbucket', mastery: 70 },
         { name: 'Terminal', mastery: 75 }
     ]]
 
@@ -66,27 +69,31 @@ const Skills = () => {
     }
 
     return (
-        // <div className='container'>
-        //     <div id='skills' className='section-content'>
-        //         <h1>Skills</h1>
-        //         <div id='columns' className='column-group'>
-        //             <SkillColumn title={'Languages'} skills={skills[0]} colorHex={colors[0]} />
-        //             <SkillColumn title={'Frameworks'} skills={skills[1]} colorHex={colors[1]} />
-        //             <SkillColumn title={'Dev Tools'} skills={skills[2]} colorHex={colors[2]} />
-        //         </div>
-        //     </div>
-        // </div>
-        <div id='skills' className='column has-text-centered'>
-            <h1 className='has-text-black is-size-2'>Skills</h1>
-            <div id='columns' className='columns is-10'>
-                <div className='column'>
-                    <SkillColumn title={'Languages'} skills={skills[0]} colorHex={colors[0]} />
-                </div>
-                <div className='column'>
-                    <SkillColumn title={'Languages'} skills={skills[1]} colorHex={colors[1]} />
-                </div>
-                <div className='column'>
-                    <SkillColumn title={'Languages'} skills={skills[2]} colorHex={colors[2]} />
+        <div className='section'>
+            <div className='container'>
+                <div className='columns is-centered'>
+                    <div className='column has-text-centered is-12 has-background-white py-6'>
+                        <div className='columns is-centered'>
+                            <div className='column has-text-centered'>
+                                <div id='skills' className='pt-6' style={{ opacity: 0 }}>
+                                    <h1 className='has-text-custom is-size-2 pt-6'>Skills</h1>
+                                    <div className='container is-narrow'>
+                                        <div id='columns' className='columns'>
+                                            <div className='column skill-column'>
+                                                <SkillColumn title={'Languages'} skills={skills[0]} colorHex={colors[0]} />
+                                            </div>
+                                            <div className='column skill-column'>
+                                                <SkillColumn title={'Frameworks'} skills={skills[1]} colorHex={colors[1]} />
+                                            </div>
+                                            <div className='column skill-column'>
+                                                <SkillColumn title={'Dev Tools'} skills={skills[2]} colorHex={colors[2]} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

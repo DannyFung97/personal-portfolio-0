@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
     let element;
     let sticky;
     let sections;
+    let $navbarBurgers;
 
     useEffect(() => {
         element = document.getElementById('nav-container');
@@ -17,6 +18,17 @@ const Navbar = () => {
             document.getElementById('projects'),
             document.getElementById('contact'),
         ];
+        $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        }
         manageNavs(element);
     }, [])
 
@@ -31,8 +43,19 @@ const Navbar = () => {
         }
     })
 
+    function hideBurger() {
+        if ($navbarBurgers.length > 0) {
+            $navbarBurgers.forEach(el => {
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+            });
+        }
+    }
+
     function manageNavs(element) {
-        let navs = element.getElementsByClassName('navbar-item has-text-white is-size-3');
+        let navs = element.getElementsByClassName('navbar-item');
         for (let i = 0; i < sections.length; i++) {
             let elementTop = window.pageYOffset + sections[i].getBoundingClientRect().top;
             let elementBottom = elementTop + sections[i].offsetHeight;
@@ -47,24 +70,21 @@ const Navbar = () => {
     }
 
     return (
-        // <nav id='nav-container' className='nav-container'>
-        //     <ul>
-        //         <li><a className='nav' href='#home'>Home</a></li>
-        //         <li><a className='nav' href='#bio'>Bio</a></li>
-        //         <li><a className='nav' href='#skills'>Skills</a></li>
-        //         <li><a className='nav' href='#experience'>Experience</a></li>
-        //         <li><a className='nav' href='#projects'>Projects</a></li>
-        //         <li><a className='nav' href='#contact'>Contact</a></li>
-        //     </ul>
-        // </nav>
         <nav id='nav-container' className="navbar is-dark" role="navigation" aria-label="main navigation">
-            <div className="navbar-menu">
-                <a href="#home" className="navbar-item has-text-white is-size-3">Home</a>
-                <a href="#bio" className="navbar-item has-text-white is-size-3">Bio</a>
-                <a href='#skills' className="navbar-item has-text-white is-size-3">Skills</a>
-                <a href='#experience' className="navbar-item has-text-white is-size-3">Experience</a>
-                <a href='#projects' className="navbar-item has-text-white is-size-3">Projects</a>
-                <a href='#contact' className="navbar-item has-text-white is-size-3">Contact</a>
+            <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbar-target">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+
+            <div id="navbar-target" className="navbar-menu has-text-centered">
+                <a onClick={() => hideBurger()} href="#home" className="navbar-item is-size-3">Home</a>
+                <a onClick={() => hideBurger()} href="#bio" className="navbar-item is-size-3">Bio</a>
+                <a onClick={() => hideBurger()} href='#skills' className="navbar-item is-size-3">Skills</a>
+                <a onClick={() => hideBurger()} href='#experience' className="navbar-item is-size-3">Experience</a>
+                <a onClick={() => hideBurger()} href='#projects' className="navbar-item is-size-3">Projects</a>
+                <a onClick={() => hideBurger()} href='#contact' className="navbar-item is-size-3">Contact</a>
             </div>
         </nav>
     )

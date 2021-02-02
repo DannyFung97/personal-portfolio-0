@@ -29,14 +29,23 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    transition: 300ms;
 }
 
 .located {
     color: #0083f0 !important
 }
 
-.nav-container a:hover{
+.navbar-menu {
+    background-color: #00111f;
+}
+
+.navbar-item {
+    color: white;
+    transition: 300ms;
+    margin: 0 .5rem;
+}
+
+.navbar-item:hover{
     color: #00111f;
     transform: scale(1.2);
     transition: 300ms;
@@ -44,7 +53,7 @@
     animation: glowBox 6s infinite;
 }
 
-.nav-container a:active {
+.navbar-item:active {
     transform: scale(1.1);
 }
 
@@ -60,28 +69,112 @@
 
 @keyframes glowBox {
   0% {
-      -webkit-box-shadow:inset 0px -.1rem 0px 0px #0083f0;
-      -moz-box-shadow:inset 0px -.1rem 0px 0px #0083f0;
-      box-shadow:inset 0px -.1rem 0px 0px #0083f0;
+      -webkit-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+      -moz-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+      box-shadow:inset 0px -.4rem 0px 0px #0083f0;
   }
   25% {
-      -webkit-box-shadow:inset 0px -.1rem 0px 0px #725286;
-      -moz-box-shadow:inset 0px -.1rem 0px 0px #725286;
-      box-shadow:inset 0px -.1rem 0px 0px #725286;
+      -webkit-box-shadow:inset 0px -.4rem 0px 0px #725286;
+      -moz-box-shadow:inset 0px -.4rem 0px 0px #725286;
+      box-shadow:inset 0px -.4rem 0px 0px #725286;
   }
   50% {
-      -webkit-box-shadow:inset 0px -.1rem 0px 0px #e3211c;
-      -moz-box-shadow:inset 0px -.1rem 0px 0px #e3211c;
-      box-shadow:inset 0px -.1rem 0px 0px #e3211c;
+      -webkit-box-shadow:inset 0px -.4rem 0px 0px #e3211c;
+      -moz-box-shadow:inset 0px -.4rem 0px 0px #e3211c;
+      box-shadow:inset 0px -.4rem 0px 0px #e3211c;
   }
   75% {
-      -webkit-box-shadow:inset 0px -.1rem 0px 0px #725286;
-      -moz-box-shadow:inset 0px -.1rem 0px 0px #725286;
-      box-shadow:inset 0px -.1rem 0px 0px #725286;
+      -webkit-box-shadow:inset 0px -.4rem 0px 0px #725286;
+      -moz-box-shadow:inset 0px -.4rem 0px 0px #725286;
+      box-shadow:inset 0px -.4rem 0px 0px #725286;
   }
   100% {
-      -webkit-box-shadow:inset 0px -.1rem 0px 0px #0083f0;
-      -moz-box-shadow:inset 0px -.1rem 0px 0px #0083f0;
-      box-shadow:inset 0px -.1rem 0px 0px #0083f0;
+      -webkit-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+      -moz-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+      box-shadow:inset 0px -.4rem 0px 0px #0083f0;
   }
 }
+
+@-webkit-keyframes glowBox {
+    0% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+        box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+    }
+    25% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #725286;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #725286;
+        box-shadow:inset 0px -.4rem 0px 0px #725286;
+    }
+    50% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #e3211c;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #e3211c;
+        box-shadow:inset 0px -.4rem 0px 0px #e3211c;
+    }
+    75% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #725286;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #725286;
+        box-shadow:inset 0px -.4rem 0px 0px #725286;
+    }
+    100% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+        box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+    }
+  }
+  
+  @-moz-keyframes glowBox {
+    0% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+        box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+    }
+    25% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #725286;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #725286;
+        box-shadow:inset 0px -.4rem 0px 0px #725286;
+    }
+    50% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #e3211c;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #e3211c;
+        box-shadow:inset 0px -.4rem 0px 0px #e3211c;
+    }
+    75% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #725286;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #725286;
+        box-shadow:inset 0px -.4rem 0px 0px #725286;
+    }
+    100% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+        box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+    }
+  }
+
+  @-o-keyframes glowBox {
+    0% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+        box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+    }
+    25% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #725286;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #725286;
+        box-shadow:inset 0px -.4rem 0px 0px #725286;
+    }
+    50% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #e3211c;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #e3211c;
+        box-shadow:inset 0px -.4rem 0px 0px #e3211c;
+    }
+    75% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #725286;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #725286;
+        box-shadow:inset 0px -.4rem 0px 0px #725286;
+    }
+    100% {
+        -webkit-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+        -moz-box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+        box-shadow:inset 0px -.4rem 0px 0px #0083f0;
+    }
+  }

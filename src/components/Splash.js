@@ -4,6 +4,8 @@ import './Splash.css'
 
 const Splash = () => {
     useEffect(() => {
+        // var intro = document.getElementById("intro");
+        // var sil = document.getElementById("silhouette");
         var subtitles = document.getElementsByClassName("splash-subtitle");
         for (let i = 0; i < subtitles.length; i++) {
             subtitles[i].animate([
@@ -13,31 +15,30 @@ const Splash = () => {
             ],
                 {
                     duration: 300,
-                    delay: 550 * i + 1550,
+                    delay: 550 * i + 1700,
                     fill: 'forwards'
                 })
         }
     }, [])
 
     return (
-        <div id='home' className='splash-container'>
-            <div className='splash-intro-container'>
-                <div className='splash-intro'>
-                    <h1>Hi, I'm <span style={{ color: "#fff050" }}>Danny Fung</span>.</h1>
-                    <div className='splash-subtitle'><h2>I design</h2></div>
-                    <div className='splash-subtitle'><h2>I code</h2></div>
-                    <div className='splash-subtitle'><h2>I build</h2></div>
+        <div className='section'>
+            <div className='container'>
+                <div className='columns is-centered' style={{ margin: 0 }}>
+                    <div id='home' className='splash-container column'>
+                        <div id='intro' className='splash-intro-container'>
+                            <div className='splash-intro'>
+                                <h1>Hi, I'm <span style={{ color: "#fff050" }}>Danny Fung</span>.</h1>
+                                <div className='splash-subtitle'><h2 className='is-size-3'>I design</h2></div>
+                                <div className='splash-subtitle'><h2 className='is-size-3'>I code</h2></div>
+                                <div className='splash-subtitle'><h2 className='is-size-3'>I build</h2></div>
+                            </div>
+                        </div>
+                        <div id='silhouette' className='splash-silhouette'>
+                            <img src={silhouette} />
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div className='splash-silhouette'>
-                <img src={silhouette} />
-            </div>
-            <div className='splash-background'>
-                <div className="background-anim"></div>
-                <div className="background-anim background-anim-2"></div>
-                <div className="background-anim background-anim-3"></div>
-                <div className="background-anim background-anim-4"></div>
-                <div className="background-anim background-anim-5"></div>
             </div>
         </div>
     );

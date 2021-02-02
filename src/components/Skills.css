@@ -1,6 +1,3 @@
-.skill-columns {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 10vh 0;
+.skill-column {
+    padding: .05rem;
 }

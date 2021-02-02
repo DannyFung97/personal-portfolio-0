@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import danny from '../assets/danny.png'
+import danny from '../assets/danny-circle.png'
 import { checkAnim } from './animationTrigger';
 import './Bio.css';
 
@@ -13,12 +13,12 @@ const Bio = () => {
         if (scrollPos + window.innerHeight > elementPos) {
             let descriptions = bio.getElementsByClassName('bio-description');
             for (let i = 0; i < descriptions.length; i++) {
-                popIn(descriptions[i], i)
+                fadeIn(descriptions[i], i)
             }
         }
     })
 
-    function popIn(description, i) {
+    function fadeIn(description, i) {
         if (!description.classList.contains('anim-done')) {
             description.classList.add('anim-done')
             description.animate([
@@ -34,37 +34,28 @@ const Bio = () => {
     }
 
     return (
-        // <div className='container'>
-        //     <div id='bio' className='section-content'>
-        //         <h1>Bio</h1>
-        //         <div id='bio-photo-div' className='bio-photo'>
-        //             <img src={danny} />
-        //         </div>
-        //         <div className='bio-paragraph'>
-        //             <h2 className='bio-description'>
-        //                 I'm a Full Stack Web Developer from San Francisco, CA.
-        //             </h2>
-        //             <h2 className='bio-description'>
-        //                 I've worked with multiple organizations to create user interfaces and applications.
-        //                 As a curious problem solver, I enjoy learning about new things and building cool projects.
-        //             </h2>
-        //         </div>
-        //     </div>
-        // </div>
-        <div className='columns is-centered pt-6'>
-            <div id='bio' className="column has-text-centered is-10">
-                <h1 className='has-text-black is-size-2'>Bio</h1>
-                <div id='bio-photo-div' className='bio-photo'>
-                    <img src={danny} />
-                </div>
-                <div className='bio-paragraph'>
-                    <h2 className='has-text-black is-size-3'>
-                        I'm a Full Stack Web Developer from San Francisco, CA.
-                </h2>
-                    <h2 className='has-text-black is-size-3'>
-                        I've worked with multiple organizations to create user interfaces and applications.
-                        As a curious problem solver, I enjoy learning about new things and building cool projects.
-                </h2>
+        <div className='section'>
+            <div className='container'>
+                <div className='columns is-centered'>
+                    <div className="column has-text-centered is-12 has-background-white py-6">
+                        <div className='columns is-centered'>
+                            <div className="column has-text-centered is-9">
+                                <div id='bio' className='pt-6' style={{ opacity: 0 }}>
+                                    <h1 className='has-text-custom is-size-2 pt-6'>Bio</h1>
+                                    <div id='bio-photo-div' className='bio-photo'>
+                                        <img src={danny} />
+                                    </div>
+                                    <div className='bio-paragraph'>
+                                        <h2 className='has-text-custom is-size-4 bio-description has-text-weight-normal'>
+                                            I'm a Full Stack Web Developer from San Francisco, CA.</h2>
+                                        <h2 className='has-text-custom is-size-4 bio-description has-text-weight-normal'>
+                                            I've worked with multiple organizations to create user interfaces and applications.
+                                            As a curious problem solver, I enjoy learning about new things and building cool projects.</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

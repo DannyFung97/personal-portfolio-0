@@ -6,7 +6,7 @@
 .skill-bar-amount {
     text-align: right;
     color: white;
-    padding: 0 5px;
+    padding: .2rem 5px;
     width: 20%;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .skill-name {
-    width: 100px;
+    width: 10rem;
     text-align: right;
     padding: 0 10px;
     white-space: nowrap;

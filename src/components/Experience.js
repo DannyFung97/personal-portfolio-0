@@ -77,136 +77,48 @@ const Experience = () => {
                 })
         }
     }
-
-    // return (
-    //     <div className='container'>
-    //         <div id='experience' className='section-content'>
-    //             <h1>Experience</h1>
-    //             <div className='resume-download'>
-    //                 <a href={resume}>
-    //                     <button>Resume</button>
-    //                 </a>
-    //             </div>
-    //             <div id='list' className='work-exp-list'>
-    //                 <ul>
-    //                     <li>
-    //                         <div className='work-exp'>
-    //                             <div className='work-exp-pic'>
-    //                                 <img src={aeec} />
-    //                             </div>
-    //                             <div className='work-exp-info'>
-    //                                 <h2>AEEC, LLC</h2>
-    //                                 <h3>June 2020 - Present</h3>
-    //                             </div>
-    //                             <div className='work-exp-description'>
-    //                                 <h2 className='light-text'>Software Engineer</h2>
-    //                             </div>
-    //                         </div>
-    //                     </li>
-    //                     <li>
-    //                         <div className='work-exp'>
-    //                             <div className='work-exp-pic'>
-    //                                 <img src={sdsc} />
-    //                             </div>
-    //                             <div className='work-exp-info'>
-    //                                 <h2>San Diego Supercomputer Center</h2>
-    //                                 <h3>July 2019 - March 2020</h3>
-    //                             </div>
-    //                             <div className='work-exp-description'>
-    //                                 <h2 className='light-text'>Student Research Assistant</h2>
-    //                             </div>
-    //                         </div>
-    //                     </li>
-    //                     <li>
-    //                         <div className='work-exp'>
-    //                             <div className='work-exp-pic'>
-    //                                 <img src={ledgersafe} />
-    //                             </div>
-    //                             <div className='work-exp-info'>
-    //                                 <h2>LedgerSafe</h2>
-    //                                 <h3>May 2019 - September 2019</h3>
-    //                             </div>
-    //                             <div className='work-exp-description'>
-    //                                 <h2 className='light-text'>Front-end Developer Intern</h2>
-    //                             </div>
-    //                         </div>
-    //                     </li>
-    //                     <li>
-    //                         <div className='work-exp'>
-    //                             <div className='work-exp-pic'>
-    //                                 <img src={btg} />
-    //                             </div>
-    //                             <div className='work-exp-info'>
-    //                                 <h2>Blockchain Technology Group, LLC</h2>
-    //                                 <h3>October 2018 - December 2018</h3>
-    //                             </div>
-    //                             <div className='work-exp-description'>
-    //                                 <h2 className='light-text'>Software Engineering Intern</h2>
-    //                             </div>
-    //                         </div>
-    //                     </li>
-    //                 </ul>
-    //             </div>
-    //         </div>
-    //     </div>
-    // );
-
     return (
-        <div id='experience' className='column has-text-centered pt-6'>
-            <h1 className='has-text-black is-size-2'>Experience</h1>
-            <div className='resume-download'>
-                <a href={resume}>
-                    <button>Resume</button>
-                </a>
-            </div>
-            <div className='columns has-text-centered is-centered pt-6'>
-                <div id='list' className='column is-10 is-centered'>
-                    <div className='columns is-full'>
-                        <div className='column'>
-                            <img src={aeec} />
+        <div className='section'>
+            <div className='container'>
+                <div className='columns is-centered'>
+                    <div className='column has-text-centered is-12 has-background-white py-6'>
+                    <div className='columns is-centered'>
+                    <div className='column has-text-centered is-11'>
+                        <div id='experience' className='pt-6' style={{ opacity: 0 }}>
+                            <h1 className='has-text-custom is-size-2 pt-6'>Experience</h1>
+                            <div className='resume-download'>
+                                <a href={resume}>
+                                    <button>Resume</button>
+                                </a>
+                            </div>
+                            <div id='list' className='columns has-text-centered is-centered is-relative py-6'>
+                                <div className='column column-container'>
+                                    <img src={aeec} />
+                                    <h2 className='has-text-custom is-size-4'>AEEC, LLC</h2>
+                                    <h3 className='has-text-custom is-size-5 has-text-weight-normal'>June 2020 - Present</h3>
+                                    <h2 className='has-text-custom is-size-4'>Software Engineer</h2>
+                                </div>
+                                <div className='column column-container'>
+                                    <img src={sdsc} />
+                                    <h2 className='has-text-custom is-size-4'>San Diego Supercomputer Center</h2>
+                                    <h3 className='has-text-custom is-size-5 has-text-weight-normal'>July 2019 - March 2020</h3>
+                                    <h2 className='has-text-custom is-size-4'>Student Research Assistant</h2>
+                                </div>
+                                <div className='column column-container'>
+                                    <img src={ledgersafe} />
+                                    <h2 className='has-text-custom is-size-4'>LedgerSafe</h2>
+                                    <h3 className='has-text-custom is-size-5 has-text-weight-normal'>May 2019 - September 2019</h3>
+                                    <h2 className='has-text-custom is-size-4'>Front-end Developer Intern</h2>
+                                </div>
+                                <div className='column column-container'>
+                                    <img src={btg} />
+                                    <h2 className='has-text-custom is-size-4'>Blockchain Technology Group, LLC</h2>
+                                    <h3 className='has-text-custom is-size-5 has-text-weight-normal'>October 2018 - December 2018</h3>
+                                    <h2 className='has-text-custom is-size-4'>Software Engineering Intern</h2>
+                                </div>
+                            </div>
                         </div>
-                        <div className='column'>
-                            <h2 className='has-text-black is-size-3'>AEEC, LLC</h2>
-                            <h3 className='has-text-black is-size-3'>June 2020 - Present</h3>
                         </div>
-                        <div className='column'>
-                            <h2 className='has-text-black is-size-3'>Software Engineer</h2>
-                        </div>
-                    </div>
-                    <div className='columns is-full'>
-                        <div className='column'>
-                            <img src={sdsc} />
-                        </div>
-                        <div className='column'>
-                            <h2 className='has-text-black is-size-3'>San Diego Supercomputer Center</h2>
-                            <h3 className='has-text-black is-size-3'>July 2019 - March 2020</h3>
-                        </div>
-                        <div className='column'>
-                            <h2 className='has-text-black is-size-3'>Student Research Assistant</h2>
-                        </div>
-                    </div>
-                    <div className='columns is-full'>
-                        <div className='column'>
-                            <img src={ledgersafe} />
-                        </div>
-                        <div className='column'>
-                            <h2 className='has-text-black is-size-3'>LedgerSafe</h2>
-                            <h3 className='has-text-black is-size-3'>May 2019 - September 2019</h3>
-                        </div>
-                        <div className='column'>
-                            <h2 className='has-text-black is-size-3'>Front-end Developer Intern</h2>
-                        </div>
-                    </div>
-                    <div className='columns is-full'>
-                        <div className='column'>
-                            <img src={btg} />
-                        </div>
-                        <div className='column'>
-                            <h2 className='has-text-black is-size-3'>Blockchain Technology Group, LLC</h2>
-                            <h3 className='has-text-black is-size-3'>October 2018 - December 2018</h3>
-                        </div>
-                        <div className='column'>
-                            <h2 className='has-text-black is-size-3'>Software Engineering Intern</h2>
                         </div>
                     </div>
                 </div>

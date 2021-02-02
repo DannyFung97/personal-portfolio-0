@@ -11,14 +11,23 @@ import './App.css';
 function App() {
     return (
         <div className='portfolio-wrapper'>
-            <HomeSection />
-            <Navbar />
-            <div className='content'>
-                <BioSection />
-                <SkillSection />
-                <ExperienceSection />
-                <ProjectSection />
-                <ContactSection />
+            <div className='background'>
+                <HomeSection />
+                <Navbar />
+                <div className='content'>
+                    <BioSection />
+                    <SkillSection />
+                    <ExperienceSection />
+                    <ProjectSection />
+                    <ContactSection />
+                </div>
+                <div>
+                    <div className="background-anim"></div>
+                    <div className="background-anim background-anim-2"></div>
+                    <div className="background-anim background-anim-3"></div>
+                    <div className="background-anim background-anim-4"></div>
+                    <div className="background-anim background-anim-5"></div>
+                </div>
             </div>
         </div>
     )

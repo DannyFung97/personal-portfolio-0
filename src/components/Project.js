@@ -19,13 +19,13 @@ const Project = () => {
         {
             name: 'Task List',
             img: tasklist,
-            info: "A web app that stores newly created tasks and also allows the user to check off tasks.",
+            info: "A web app that stores user-created tasks and allows check offs.",
             url: 'https://github.com/DannyFung97/task-list-react-project'
         },
         {
             name: 'Randomized Breakout',
             img: breakout,
-            info: "A game project built based on the Breakout arcade game with tweaked mechanics.",
+            info: "A game project built based on the Breakout arcade game.",
             url: 'https://dannyfung97.github.io/randomized-breakout/'
         },
         {
@@ -43,7 +43,6 @@ const Project = () => {
         let elementPos = window.pageYOffset + projects.getBoundingClientRect().top + (projects.offsetHeight / 4);
         if (scrollPos + window.innerHeight > elementPos) {
             let containers = projects.getElementsByClassName('column-container')
-            console.log(containers)
             for (let i = 0; i < containers.length; i++) {
                 if (!containers[i].classList.contains('anim-done')) {
                     containers[i].classList.add('anim-done')
@@ -52,8 +51,8 @@ const Project = () => {
                         { transform: 'rotateY(0deg)' }
                     ],
                         {
-                            duration: 200,
-                            delay: i * 200 + 200,
+                            duration: 900,
+                            delay: i * 100 + 100,
                             easing: 'ease',
                             fill: 'forwards'
                         })
@@ -63,16 +62,38 @@ const Project = () => {
     })
 
     return (
-        <div className='container'>
-            <div id='projects' className='section-content'>
-                <h1>Projects</h1>
-                <div className='column-group project-row'>
-                    <ProjectColumn project={projects[0]} />
-                    <ProjectColumn project={projects[1]} />
-                </div>
-                <div className='column-group project-row'>
-                    <ProjectColumn project={projects[2]} />
-                    <ProjectColumn project={projects[3]} />
+        <div className='section'>
+            <div className='container'>
+                <div className='box'>
+                    <div className='content'>
+                        <div className='columns is-centered'>
+                            <div className='column has-text-centered is-12 has-background-white py-6'>
+                                <div className='columns is-centered'>
+                                    <div className='column has-text-centered is-11'>
+                                        <div id='projects' className='pt-6' style={{ opacity: 0 }}>
+                                            <h1 className='has-text-custom is-size-2 pt-6'>Projects</h1>
+                                            <div className='columns is-centered'>
+                                                <div className="column is-5">
+                                                    <ProjectColumn project={projects[0]} />
+                                                </div>
+                                                <div className="column is-5">
+                                                    <ProjectColumn project={projects[1]} />
+                                                </div>
+                                            </div>
+                                            <div className='columns is-centered'>
+                                                <div className="column is-5">
+                                                    <ProjectColumn project={projects[2]} />
+                                                </div>
+                                                <div className="column is-5">
+                                                    <ProjectColumn project={projects[3]} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
