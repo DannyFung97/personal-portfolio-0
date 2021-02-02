@@ -47,8 +47,8 @@ const Project = () => {
                 if (!containers[i].classList.contains('anim-done')) {
                     containers[i].classList.add('anim-done')
                     containers[i].animate([
-                        { transform: 'rotateY(90deg)' },
-                        { transform: 'rotateY(0deg)' }
+                        { opacity: 0, transform: 'rotateY(90deg)' },
+                        { opacity: 1, transform: 'rotateY(0deg)' }
                     ],
                         {
                             duration: 900,

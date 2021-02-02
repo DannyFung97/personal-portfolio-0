@@ -13,21 +13,43 @@ const Bio = () => {
         if (scrollPos + window.innerHeight > elementPos) {
             let descriptions = bio.getElementsByClassName('bio-description');
             for (let i = 0; i < descriptions.length; i++) {
-                fadeIn(descriptions[i], i)
+                if(i % 2 === 0) {
+                    slideFromLeft(descriptions[i], i);
+                }
+                else{
+                    slideFromRight(descriptions[i], i);
+                }
             }
         }
-    })
+    });
 
-    function fadeIn(description, i) {
-        if (!description.classList.contains('anim-done')) {
-            description.classList.add('anim-done')
-            description.animate([
-                { opacity: '0' },
-                { opacity: '1' }
+    function slideFromRight(el, i) {
+        if (!el.classList.contains('anim-done')) {
+            el.classList.add('anim-done')
+            el.animate([
+                { opacity: 0, transform: 'translateX(50%)' },
+                { opacity: 1, transform: 'translateX(0%)' }
             ],
                 {
-                    duration: 300,
-                    delay: 550 * i + 400,
+                    duration: 600,
+                    delay: i * 400 + 300,
+                    easing: 'ease',
+                    fill: 'forwards'
+                })
+        }
+    }
+
+    function slideFromLeft(el, i) {
+        if (!el.classList.contains('anim-done')) {
+            el.classList.add('anim-done')
+            el.animate([
+                { opacity: 0, transform: 'translateX(-50%)' },
+                { opacity: 1, transform: 'translateX(0%)' }
+            ],
+                {
+                    duration: 600,
+                    delay: i * 400 + 300,
+                    easing: 'ease',
                     fill: 'forwards'
                 })
         }

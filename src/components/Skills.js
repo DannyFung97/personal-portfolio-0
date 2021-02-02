@@ -42,13 +42,32 @@ const Skills = () => {
         let scrollPos = window.scrollY;
         let elementPos = window.pageYOffset + columnGroup.getBoundingClientRect().top + (columnGroup.offsetHeight / 4);
         if (scrollPos + window.innerHeight > elementPos) {
+            let columnContainers = columnGroup.getElementsByClassName('column-container')
+            for (let i = 0; i < columnContainers.length; i++) {
+                appear(columnContainers[i], i);
+            }
             let columns = document.getElementsByClassName('column-list')
             for (let i = 0; i < columns.length; i++) {
-                let barsToFill = columns[i].getElementsByClassName('skill-bar-amount')
-                fill(barsToFill, i);
+                fill(columns[i].getElementsByClassName('skill-bar-amount'), i);
             }
         }
     })
+
+    function appear(column, i) {
+        if (!column.classList.contains('anim-done')) {
+            column.classList.add('anim-done')
+            column.animate([
+                { opacity: 0, transform: 'translateY(20%)' },
+                { opacity: 1, transform: 'translateY(0%)' }
+            ],
+                {
+                    duration: 900,
+                    delay: 300 * i + 200,
+                    easing: 'ease',
+                    fill: 'forwards'
+                })
+        }
+    }
 
     function fill(list, i) {
         for (let j = 0; j < list.length; j++) {
@@ -60,7 +79,7 @@ const Skills = () => {
                 ],
                     {
                         duration: 500,
-                        delay: 100 * j + 300,
+                        delay: 100 * j + 600,
                         easing: 'ease',
                         fill: 'forwards'
                     })
